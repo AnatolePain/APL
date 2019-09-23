@@ -2,27 +2,33 @@
 #include<stdlib.h>
 
 int main(int argc, char * argv[]){
-	int jourDD;
-	int jourMM;
-	int jourAA;
+  setbuf(stdout, NULL);
 
-	int ageDD;
-	int ageMM;
-	int ageAA;
+  int jourDD;
+  int jourMM;
+  int jourAA;
+
+  int ageDD;
+  int ageMM;
+  int ageAA;
 
   printf("Date du jour:");
-	scanf("%d/%d/%d", &jourDD,&jourMM,&jourAA);
-	printf("Vote age: ");
+  scanf("%d/%d/%d", &jourDD,&jourMM,&jourAA);
+  printf("Date de naissance: ");
   scanf("%d/%d/%d",&ageDD, &ageMM,&ageAA);
   
-	int monAge = jourAA-ageAA;
+  int monAge = jourAA-ageAA;
+  
+  if(jourAA < ageDD){
+   monAge = (100 - ageAA) + jourAA;
+  }
 
-
-		if (jourMM > ageMM){
-		monAge = monAge + 1;
-	}
+  if ((jourMM < ageMM) || (jourMM == ageMM && jourDD < ageDD)){
+    monAge = monAge - 1;
+  }
+    
 	
-	printf("vous avez %d ans\n",monAge);
+  printf("vous avez %d ans\n",monAge);
 
 
 return EXIT_SUCCESS;
