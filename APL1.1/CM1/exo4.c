@@ -9,14 +9,14 @@ int main(int argc, char * argv[]){
 	int j = 0;
 	char ouiNon = 'o';
 	char suprTampon;
-	int tab[NB_LANCER];
+	int tab[NB_LANCER] = {4, 2, 1};
 	srand(time(NULL));
 
   while((ouiNon == 'o') && (j<NB_LANCER)){ /*le while continu tant que la reponse est oui
 																		        et que le nombre de tour ne dépasse pas 3*/
 	
 		for(i=0;i<NB_LANCER;i++){  /*remplissage du tableaux...*/
-  		tab[i] = (rand()%6)+1;   /*...de 3 valeurs compris entre 0 et 6*/
+  		/*tab[i] = (rand()%6)+1;*/   /*...de 3 valeurs compris entre 0 et 6*/
  		}
 
 		for(i=0;i<NB_LANCER;i++){  /*affichage du tableaux*/
