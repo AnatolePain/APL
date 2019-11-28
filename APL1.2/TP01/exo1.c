@@ -8,11 +8,9 @@ int main(int argc, char * argv[]){
     int nb_de_reel = 0;
     float *reel = NULL;
 
-    /*reel = malloc(nb_de_reel*sizeof(float));*/
-
-    reel = (float*)malloc(nb_de_reel*sizeof(float));
     printf("Combien de reel allez vous rentrez ? ");
     scanf("%d",&nb_de_reel);
+    reel = (float*)malloc(nb_de_reel*sizeof(float));
 
     for(i = 0, k = 1; i < nb_de_reel ; i++ , k++){
         printf("reel %d: ",k);
@@ -25,20 +23,18 @@ int main(int argc, char * argv[]){
 
         for(k = 0 ; k < nb_de_reel ; k++){
             if(reel[i] == reel[k] ){
-                indicateur = 1;
-                printf("test %d \n",indicateur);
+                indicateur++;
             }
 
         }
 
-        if(indicateur != 1){
-            printf("%f ,",reel[i]);
-        }else{
-             printf("test,");
+        if(indicateur < 2){
+            printf("%f ",reel[i]);
         }
 
     }
 
+    printf("\n");
 
     return EXIT_SUCCESS;
 }
