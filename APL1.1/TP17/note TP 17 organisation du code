@@ -1,0 +1,18 @@
+2/
+oui, as -o lire.o lire.s
+	gcc -Wall -ansi -pedantic -g   -c -o personne.o personne.c
+	gcc -Wall -ansi -pedantic -g   -c -o repertoire.o repertoire.c
+	gcc -Wall -ansi -pedantic -g   -c -o main.o main.c
+	gcc -Wall -ansi -pedantic -g -o exo1 lire.o personne.o repertoire.o main.o
+
+Non car la deuxieme fois aucunc changement n'a ete fait, donc il n'affiche rien
+
+gcc -Wall -ansi -pedantic -g   -c -o repertoire.o repertoire.c
+gcc -Wall -ansi -pedantic -g -o exo1 lire.o personne.o repertoire.o main.o
+recompile le fichier modifier
+
+gcc -MM main.c =
+main.o: main.c personne.h repertoire.h
+De pendance du fichier make .c
+
+

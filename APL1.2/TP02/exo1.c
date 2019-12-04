@@ -5,6 +5,7 @@
 int main(int argc, char * argv[]){
 
 
+
     /*Struct tm{
         -----------
         -----------
@@ -15,20 +16,27 @@ int main(int argc, char * argv[]){
         -----------
     }*/
 
-    int y;
-    int z;
-    long long int x = 0;
-
-    time_t tempsBrute;
-    z = time(NULL);
-    //struct tm *structPointeVersTempsBrute = &tempsBrute;
-    struct tm *tempsIso= localtime(&z);
-    y = (*tempsIso).tm_year;
-
-    printf("%d\n",y);
-
+   
+	int x;
     x=time(NULL);
-    printf("\n%lld\n",x);
+    printf("%d\n",x);
+
+    /*----------------------------------*/
+
+
+
+    time_t tempsEnsecondes; /*typedef int time_t de la bibliothèque time.h*/
+    struct tm *tempsCal;  /*temps Calandrier*/
+    time(&tempsEnsecondes); /*renvoie le temps en secondes depuis 1970*/
+
+    tempsCal = localtime(&tempsEnsecondes); /*envoi dans la structure "pointé"
+    										tempsCal la structure tm remplie des 
+    										valeurs depuis 1970 en année (tm_years),
+    										en mois(tm_years) etc*/
+
+    printf("Date du jour: %d-%d-%d",(*tempsCal).tm_year,(*tempsCal).tm_mon,(*tempsCal).tm_mday);
+
+
 
 
 

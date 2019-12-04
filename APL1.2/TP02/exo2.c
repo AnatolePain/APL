@@ -4,24 +4,25 @@
 
 int main(int argc, char * argv[]){
 
-    int x, y;
+    long unsigned int x, y;
 
     struct record{
         char a;
         char b;
         char c;
-    } recordType;
+    };
+
+    typedef struct record recordType; 
 
     printf("test01");
 
-    y = sizeof(recordType);
+    recordType eng;
+
+    y = sizeof(eng);
     x = sizeof(char)*3;
 
-    scanf("x = %c\n",x);
-    scanf("y = %c (recorType)\n",y);
-
-
-
+    printf("x = %lu\n",x);
+    printf("y = %lu (recorType)\n",y);
 
 
     return EXIT_SUCCESS;
