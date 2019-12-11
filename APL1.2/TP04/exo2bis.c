@@ -3,20 +3,18 @@
 #include<graph.h>
 
 
+typedef struct image{
+        int largeur;
+        int hauteur;
+        couleur coloris;
+}image;
+
+
 int main(int argc, char * argv[]){
 
     int i,j,k;
 
-    typedef struct image{
-        int largeur;
-        int hauteur;
-        unsigned char r;
-        unsigned char v;
-        unsigned char b;
-    }image;
-
     image bin; 
-
     FILE* flux;
 	flux = fopen("./image.bin", "r");
 
@@ -34,31 +32,18 @@ int main(int argc, char * argv[]){
 
     printf("fuofhqfug\n");
 
-    for(i=0; i<bin.largeur ; i++){
+    for(i=0; i<bin.largeur; i++){
 
-        for(j=0; j<bin.hauteur; j++){
+        for(j=0; j<bin.hauteur ; j++){
 
-            fread(&bin.r,sizeof(unsigned char),1,flux);
-            if (feof(flux)){
-                printf("erreur 03\n");
-            }
-            fread(&bin.v,sizeof(unsigned char),1,flux);
-            if (feof(flux)){
-                printf("erreur 04\n");
-             }
-            fread(&bin.b,sizeof(unsigned char),1,flux);
-            if (feof(flux)){
-                printf("erreur 05\n");
-            }
-
-            CouleurParComposante(bin.r, bin.v, bin.b);
-            printf("%c,%c,%c\n",bin.r, bin.v, bin.b);
+            fread(&bin.coloris,sizeof(bin.coloris),1,flux);
+            ChoisirCouleurDessin(bin.coloris);
             DessinerPixel(i,j);
         }
     }
     
     Touche();
-    void FermerGraphique();
+    FermerGraphique();
 
     return EXIT_SUCCESS;
 }

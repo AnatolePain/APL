@@ -33,7 +33,6 @@ int main(int argc, char * argv[]){
 
             CouleurParComposante(bin.r, bin.v, bin.b);
             DessinerPixel(i,j);
-        }
     }
 
     

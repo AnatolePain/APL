@@ -4,6 +4,10 @@ int main(int argc, char * argv[]){
 
     FILE* flux;
 	flux = fopen("./save", "r");
+    if (flux == NULL){
+        fprintf(stderr,"Erreur fichier affectation flux\n");
+        return EXIT_SUCCESS; /*on peut
+    }
 
     int save;
 
