@@ -3,37 +3,30 @@
 
 int main(int argc, char * argv[]){
 
-int main(int argc, char * argv[]){
-
-    int i,j,k;
-
-    image bin; 
+    char texte[100];
+    int i = 1;
+ 
     FILE* flux;
 	flux = fopen(argv[1], "r");
+	if(feof (flux)){
+		perror("Problème fopen\n");
+		exit(1);
+	}
 
-    fread(&bin.largeur,sizeof(int),1,flux);
-    if (feof(flux)){
-        printf("erreur 01\n");
-    }
+	while(fgets(texte,sizeof(texte),flux)){
 
-    InitialiserGraphique();
-    CreerFenetre(200,200,bin.largeur,bin.hauteur);
+		printf("\033[1;31m");    /*affiche la couleur*/
+		printf("%d:", i);
+		printf("\033[0m");
 
-    printf("fuofhqfug\n");
+		printf(" %s",texte);
+		i++;
+	}
 
-    while(){
+	printf("\n");
 
+	fclose(flux);
 
-
-
-
-
-
-    	
-    }
-    
-    Touche();
-    FermerGraphique();
 
 
 	return EXIT_SUCCESS;
