@@ -37,7 +37,7 @@ int main(int argc, char * argv[]){
 	int i;
 	unsigned short int val;
 
-	liste li;
+	liste li = NULL;
 
 	val = (rand()%888)+111;
 
