@@ -15,13 +15,12 @@ void affiche(liste li){
 
 	maillons* m;
 	for(m=li; m != NULL; m = m->suivant){
-
-		putchar(m->valeur);
+		printf("%hu ",m->valeur);
 	}
 }
 
 
-void ajoute(liste* p, unsigned short val){
+void ajoute(liste* p, unsigned short int val){
 
 	maillons* m = (maillons*) malloc (sizeof(maillons));
 
@@ -30,6 +29,21 @@ void ajoute(liste* p, unsigned short val){
 	*p = m;
 }
 
+
+unsigned short int affichePlusGrand(liste li){
+
+	unsigned short int plusGrand = 0;
+	maillons* m;
+
+	for(m=li; m != NULL; m = m->suivant){
+
+		if(m->valeur > plusGrand){
+			plusGrand = m->valeur;
+		}
+	}
+
+	return plusGrand;
+}
 
 int main(int argc, char * argv[]){
 
@@ -48,8 +62,13 @@ int main(int argc, char * argv[]){
 		ajoute(&li,val);
 	}
 
+	printf("\n");
 	affiche(li);
+	printf("\n");
 
+	printf("Le plus grand éléments est %hu\n\n",affichePlusGrand(li));
+
+	free(li);
 
 	return EXIT_SUCCESS;
 }
