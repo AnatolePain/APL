@@ -11,7 +11,7 @@ srand(time(NULL));
 
 for(a=0;a<10;a++){
   tab[a] = (rand()%100)-50;	
- }
+}
 
 
 for(a=0;a<10;a++){
@@ -32,4 +32,16 @@ printf("+\n");
 
 return EXIT_SUCCESS;
 }
+
+/*
+void afficherTab(int *tab, int taille){
+
+    int i;
+    for(i = 0 ; i < taille ; i++){
+    printf("%d ",*tab[i]);
+    }
+    printf("\n");
+
+}
+*/
 
