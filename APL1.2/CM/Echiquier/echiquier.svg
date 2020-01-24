@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="500" height="500" viewBox="0 0 80 80" preserveAspectRatio="xMidYMid meet">
+  <g id="ligne1">
+    <rect id="carre" x="00" y="00" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="20" y="00" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="40" y="00" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="60" y="00" width="10" height="10" fill="#b90ed0"/>
+  </g>
+  <g id="ligne2">
+    <rect id="carre" x="10" y="10" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="30" y="10" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="50" y="10" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="70" y="10" width="10" height="10" fill="#b90ed0"/>
+  </g>
+  <g id="ligne3">
+    <rect id="carre" x="00" y="20" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="20" y="20" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="40" y="20" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="60" y="20" width="10" height="10" fill="#b90ed0"/>
+  </g>
+  <g id="ligne4">
+    <rect id="carre" x="10" y="30" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="30" y="30" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="50" y="30" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="70" y="30" width="10" height="10" fill="#b90ed0"/>
+  </g>
+  <g id="ligne5">
+    <rect id="carre" x="00" y="40" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="20" y="40" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="40" y="40" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="60" y="40" width="10" height="10" fill="#b90ed0"/>
+  </g>
+  <g id="ligne6">
+    <rect id="carre" x="10" y="50" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="30" y="50" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="50" y="50" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="70" y="50" width="10" height="10" fill="#b90ed0"/>
+  </g>
+  <g id="ligne7">
+    <rect id="carre" x="00" y="60" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="20" y="60" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="40" y="60" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="60" y="60" width="10" height="10" fill="#b90ed0"/>
+  </g>
+  <g id="ligne8">
+    <rect id="carre" x="10" y="70" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="30" y="70" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="50" y="70" width="10" height="10" fill="#b90ed0"/>
+    <rect id="carre" x="70" y="70" width="10" height="10" fill="#b90ed0"/>
+  </g>
+</svg>
