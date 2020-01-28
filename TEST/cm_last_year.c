@@ -19,7 +19,7 @@ void verifieTab(int taille, int min, int max,int *tab){
     int i = 0;
     int k = 0;
 
-   /* for(i = 0 ; i < taille; i++){
+   for(i = 0 ; i < taille; i++){
 
         printf("\nTEST 403 tab[i] = %d\n",tab[i]);
         valRand = tireHasard(min, max);
@@ -41,9 +41,9 @@ void verifieTab(int taille, int min, int max,int *tab){
 
         printf("TEST 405 tab[i] = %d\n",tab[i]);
 
-    }*/
+    }
 
-    printf("\ni = %d, taille = %d, indicateur = %d", i, taille, indicateur);
+    /*printf("\ni = %d, taille = %d, indicateur = %d", i, taille, indicateur);
 
     while(i < taille){
 
@@ -68,7 +68,7 @@ void verifieTab(int taille, int min, int max,int *tab){
 
         printf("TEST 405 tab[i] = %d\n",tab[i]);
 
-    }
+    }*/
 
 }
 
