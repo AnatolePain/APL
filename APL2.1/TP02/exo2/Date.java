@@ -7,16 +7,15 @@ public class Date {
   // autre méthode
   public String toStringUp() {
 
-  	int mois29 = 29;
-  	int mois30 = 30;
-  	int mois31 = 31;
-
-  	if(mm < )
+   int mois29 = 29;
+   int mois30 = 30;
+   int mois31 = 31;
 
 
 
 
-  	return String.format("%02d-%02d-%04d", this.jj,this.mm,this.aaaa);
+
+   return String.format("%02d-%02d-%04d", this.jj,this.mm,this.aaaa);
   }
 
   public String toString() {
@@ -25,14 +24,14 @@ public class Date {
 
   public Date(int jour, int mois, int annee) {
     this.jj = jour;
-  	this.mm = mois;
-  	this.aaaa = annee;
+   this.mm = mois;
+   this.aaaa = annee;
   }
 
   public Date() {
     this.jj = 0;
-  	this.mm = 0;
-  	this.aaaa = 0;
+   this.mm = 0;
+   this.aaaa = 0;
   }
 
 
