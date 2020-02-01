@@ -5,22 +5,21 @@ public class Date {
   private int aaaa;
 
   // autre méthode
-  public String toStringUp() {
+  public Date lendemains() {
+
+
+    Date dateUp = new Date(this.jj, this.mm, this.aaaa);
 
     int typeMois = -1;
     int maxMois = -1;
 
-    //Verifie quel tupe de mois l'on est: 29 , 30 ou 31
-    if(this.mm == 2){
-      typeMois = 3;
-
-    }else if(this.mm <= 7){
-      typeMois = this.mm%2;
-
-    }else if(this.mm > 7){
-      this.mm -= 7;
-      typeMois = this.mm%2;
-      this.mm += 7;
+    //Verifie quel type de mois l'on est: 29 , 30 ou 31
+    if(dateUp.mm == 2){
+      typeMois = 2;
+    }else if(dateUp.mm <= 7){
+      typeMois = dateUp.mm%2;
+    }else if(dateUp.mm > 7){
+      typeMois = (dateUp.mm -7)%2;
     }else{
       System.out.println("erreur 01");
     }
@@ -32,7 +31,7 @@ public class Date {
       case 0:
         maxMois = 30;
         break;
-      case 3:
+      case 2:
         maxMois = 29;
         break;
       default:
@@ -40,24 +39,65 @@ public class Date {
         break;
     }
 
-    if(this.jj == maxMois){
-      this.mm++;
-      this.jj = 1;
+    if(dateUp.jj == maxMois){
+      dateUp.mm++;
+      dateUp.jj = 1;
     }else{
-      this.jj++;    //journée normale
+      dateUp.jj++;    //journée normale
     }
 
-    if(this.mm == 13){
-      this.aaaa++;
-      this.jj = 1;
-      this.mm = 1;
+
+    /*cf photo 31 janvier 16h47 */
+
+
+    if(dateUp.mm == 13){
+      dateUp.aaaa++;
+      dateUp.jj = 1;
+      dateUp.mm = 1;
     }
 
-    return String.format("%02d-%02d-%04d", this.jj,this.mm,this.aaaa);
+    return dateUp;
   }
 
   public String toString() {
+
+    /*
+    String sJour;
+    String sMois;
+    String sAnnee;
+    if(this.jour < 10) {
+      sJour = "0" + String.valueOf(this.jour);
+    } else {
+      sJour = String.valueOf(this.jour);
+    }
+
+    if(this.mois < 10) {
+      sMois = "0" + String.valueOf(this.mois);
+    } else {
+      sMois = String.valueOf(this.mois);
+    }
+
+    if(this.annee < 10) {
+      sAnnee = "000" + String.valueOf(this.annee);
+    } else if(this.annee < 100) {
+      sAnnee = "00" + String.valueOf(this.annee);
+    } else if(this.annee < 1000) {
+      sAnnee = "0" + String.valueOf(this.annee);
+    } else {
+      sAnnee = String.valueOf(this.annee);
+    }
+
+    return sAnnee + "-" + sMois + "-" + sJour;
+  }
+
+
+
+
+    */
+
+
     return String.format("%02d-%02d-%04d", this.jj,this.mm,this.aaaa);
+
   }
 
   public Date(int jour, int mois, int annee) {
@@ -67,9 +107,9 @@ public class Date {
   }
 
   public Date() {
-   this.jj = 0;
-   this.mm = 0;
-   this.aaaa = 0;
+   this.jj = 1;
+   this.mm = 1;
+   this.aaaa = 2000;
   }
 
 
