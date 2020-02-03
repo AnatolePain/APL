@@ -16,15 +16,16 @@ public class Boutons {
     JLabel etiquette = new JLabel("Bonjour !");
 
     // un composant boutons
-    JButton bouton01 = new JButton(" bouton 1");
+    JButton bouton01 = new JButton(" bouton 1 bouton 1 bouton 1 bouton 1 bouton 1 bouton 1 bouton 1 bouton 1 bouton 1 bouton 1");
     JButton bouton02 = new JButton(" bouton 2");
-    JButton bouton03 = new JButton(" bouton 3");
+    JButton bouton03 = new JButton(" bouton 3"
+    );
     JButton bouton04 = new JButton(" bouton 4");
-    JButton bouton05 = new JButton(" bouton 5");
+    JButton bouton05 = new JButton(" bouton 5  bouton 5 bouton 5 bouton 5 bouton 5 bouton 5 bouton 5 bouton 5 bouton 5 bouton 5 bouton 5 bouton 5");
 
     // on configure le boutons
-    bouton05.setHorizontalAlignment(JButton.LEFT);
-    bouton05.setVerticalAlignment(JButton.CENTER);
+    /*bouton05.setHorizontalAlignment(JButton.LEFT);
+    bouton05.setVerticalAlignment(JButton.CENTER);*/
 
     // on ajoute le composant dans la fenetre, au milieu
     fenetre.add(bouton01, BorderLayout.NORTH);
