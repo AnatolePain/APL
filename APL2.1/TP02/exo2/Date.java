@@ -88,12 +88,7 @@ public class Date {
     }
 
     return sAnnee + "-" + sMois + "-" + sJour;
-  }
-
-
-
-
-    */
+  }*/
 
 
     return String.format("%02d-%02d-%04d", this.jj,this.mm,this.aaaa);
