@@ -8,6 +8,9 @@ public class Choix {
         JFrame fenetre = new JFrame();
         fenetre.setSize(500, 300);
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        GridLayout gestionnaire = new GridLayout(4, 1);
+        fenetre.setLayout(gestionnaire);
+
 
         JRadioButton bouton01 = new JRadioButton("Gryffondor");
         JRadioButton bouton02 = new JRadioButton("Serdaigle");
@@ -20,17 +23,10 @@ public class Choix {
         poudlardChoix.add(bouton03);
         poudlardChoix.add(bouton04);
 
-        Dimension dimBouton= new Dimension(100, 70);
-
-        dimBouton.setPreferredSize(bouton01);
-        dimBouton.setPreferredSize(bouton02);
-        dimBouton.setPreferredSize(bouton03);
-        dimBouton.setPreferredSize(bouton04);
-
-        fenetre.add(bouton01, BorderLayout.NORTH);
-        fenetre.add(bouton02, BorderLayout.CENTER);
-        fenetre.add(bouton03, BorderLayout.CENTER);
-        fenetre.add(bouton04, BorderLayout.SOUTH);
+        fenetre.add(bouton01);
+        fenetre.add(bouton02);
+        fenetre.add(bouton03);
+        fenetre.add(bouton04);
 
         fenetre.setVisible(true);
 
