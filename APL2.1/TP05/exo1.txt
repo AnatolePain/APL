@@ -1,8 +1,8 @@
 package class String : java.lang
 classe hérité: Object
-nb méthodes sont transmises par la classe mère: 2 (ou 3)
-Sur celles-ci, combien sont redéfinies: 
-9+
+nb méthodes sont transmises par la classe mère: 8
+Sur celles-ci, combien sont redéfinies: aucune
+
 
 
 
