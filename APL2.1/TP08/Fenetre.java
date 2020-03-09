@@ -6,36 +6,28 @@ public class Fenetre extends JFrame {
 
 	public Fenetre(){
 
-	    JFrame fenetre = new JFrame();
-	    fenetre.setSize(500, 300);
-	    fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    this.setSize(500, 300);
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-	    FlowLayout layout1 = new FlowLayout(Flolayout.CENTER);
-	    fenetre.setLayout(layout1);
+		JPanel panneaux = new JPanel();
+		this.add(panneaux,BorderLayout.CENTER);
+
+	    FlowLayout layout1 = new FlowLayout(FlowLayout.CENTER);
+	    panneaux.setLayout(layout1);
 
 	    JButton bCyan = new JButton("Cyan");
-	    fenetre.add(bCyan);
-	    JButton bMagenta = new JButton("Magneta");
-	    fenetre.add(bMagenta);
+	    panneaux.add(bCyan);
+	    JButton bMagenta = new JButton("Magenta");
+	    panneaux.add(bMagenta);
 	    JButton bJaune = new JButton("Jaune");
-	    fenetre.add(bJaune);
+	    panneaux.add(bJaune);
 
-	    JPannel pan = new JPannel();
-	    fenetre.add(pan,BorderLayout.CENTER);
+	    Modele stockageDonne = new Modele();						//A INVERSER: FAUX
+	    ChangeColor observateur = new ChangeColor(stockageDonne,panneaux);
 
-	    Modele stockageDonne = new Modele();						//A INVERSER FAUX
-	    ChangeColor controller = new ChangeColor(stockageDonne);
-
-	    bCyan.addActionListener(controller);
-		bMagenta.addActionListener(controller);
-		bJaunne.addActionListener(controller);
-
-		Color color = new Color(,192,192);
-		pan.setBackground();
-
-
-
-
+	    bCyan.addActionListener(observateur);
+		bMagenta.addActionListener(observateur);
+		bJaune.addActionListener(observateur);
 
 	}
 
