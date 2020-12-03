@@ -2,18 +2,18 @@
 #include<stdlib.h>
 #include<time.h>
 
-struct maillons{
+struct mail{
 
 	unsigned short int valeur;
-	struct maillons* suivant;
+	struct mail* suivant;
 };
 
-typedef struct maillons maillons;
-typedef struct maillons* liste; 
+typedef struct mail maillon;
+typedef maillon* liste; 
 
 void affiche(liste li){
 
-	maillons* m;
+	maillon* m;
 	for(m=li; m != NULL; m = m->suivant){
 		printf("%hu ",m->valeur);
 	}
@@ -22,7 +22,7 @@ void affiche(liste li){
 
 void ajoute(liste* p, unsigned short int val){
 
-	maillons* m = (maillons*) malloc (sizeof(maillons));
+	maillon* m = (maillon*) malloc (sizeof(maillon));
 
 	m->valeur = val;
 	m->suivant = *p;
@@ -33,7 +33,7 @@ void ajoute(liste* p, unsigned short int val){
 unsigned short int affichePlusGrand(liste li){
 
 	unsigned short int plusGrand = 0;
-	maillons* m;
+	maillon* m;
 
 	for(m=li; m != NULL; m = m->suivant){
 

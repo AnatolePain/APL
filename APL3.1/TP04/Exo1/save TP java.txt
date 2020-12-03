@@ -1,0 +1,55 @@
+import java.util.*;
+import java.lang.*;
+
+public class Main{
+
+	private static final char PLUS = 43;
+	private static final char MOINS = 45;
+	private static final char DIVISER = 67;
+	private static final char FOIS = 120;
+
+	public static void main(String[] args) {
+		
+		Deque<Integer> maPile = new ArrayDeque<Integer>();
+
+		if( args.length < 2){
+			System.out.println("erreur il manque des arguments ");
+			System.exit(1);
+		}
+
+		int i = 0; 
+		while( i < args.length ){
+
+			try{
+
+			if(args[i].equals("+")){
+				int result = maPile.pollLast() + maPile.pollLast();
+				maPile.add(result);
+			}else if (args[i].equals("-")){
+				int result = maPile.pollLast() - maPile.pollLast();
+				maPile.add(result);
+			}else if (args[i].equals("/")){
+				System.out.println("D: args["+i+"] = " + args[i]);
+				int result = maPile.pollLast() / maPile.pollLast();
+				maPile.add(result);
+			}else if (args[i].equals("x")){
+				int result = maPile.pollLast() * maPile.pollLast();
+				maPile.add(result);
+			}else{
+				System.out.println("R: args["+i+"] = " + args[i]);
+				maPile.add(Integer.parseInt(args[i]));
+			}
+
+			}catch(NumberFormatException e){
+				System.out.println("e = " + e);
+				System.out.println("Attention !");
+				System.out.println("Vous ne pouvez que entrer \"+\", \"-\", \"x\", \"/\" et des nombres");
+				System.exit(1);
+			}
+
+			i++;
+		}
+
+		System.out.println( "= " + maPile.getLast() );
+	}
+}
