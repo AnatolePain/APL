@@ -4,15 +4,16 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
-public class ChangeImage implements ListSelectionListener  {
+public class Souris implements ListSelectionListener  {
 
-	//Galerie gal;
-	// public ChangeImage(Galerie g){
-	// 	this.gal = g;
-	// }
+	Couleurs couleur;
+
+	public Souris(Couleurs c){
+		this.couleur = c;
+	}
 
 	@Override
 	public void valueChanged(ListSelectionEvent e){
-		System.out.println(e.getFirstIndex());
+		this.couleur.changeCouleur(e.getFirstIndex());
 	}
 }

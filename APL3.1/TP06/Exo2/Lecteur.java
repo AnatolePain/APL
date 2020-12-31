@@ -1,9 +1,10 @@
 import java.util.*;
 import java.io.*;
+import java.awt.*;
 
 public class Lecteur {
 
-	private Map<String,int[]> dictionaire = new HashMap<>();
+	private Map<String,Color> dictionaire = new HashMap<>();
 
 	public Lecteur(){
 
@@ -12,22 +13,23 @@ public class Lecteur {
 
 		try {
 
-  			BufferedReader lecture = new BufferedReader(
-                           			new FileReader("rgb.txt"));
+  			BufferedReader lecture = new BufferedReader(new FileReader("rgb.txt"));
 
 	  		try {
+
 	   			while((ligne = lecture.readLine()) != null) {
 
-	  			  System.out.println(" ======= ");
 	     		  String[] s = ligne.trim().split("\\s+", 4);
+
 	     		  for(int i = 0; i < s.length-1 ; i++ ){
-	   			  	System.out.println(s[i].trim());
 	   			  	rgb[i] = Integer.parseInt(s[i]);
 	     		  }
-	   			  	System.out.println(s[s.length-1].trim());
-	   			  	dictionaire.put(s[s.length-1], rgb);
-	   			  	
+
+	     		  Color color = new Color(rgb[0],rgb[1],rgb[2]);
+	   			  dictionaire.put(s[s.length-1], color);	
+
 	    		}
+	    		
  			} catch(IOException e) {
    	 			System.err.println("Erreur de lecture dans rgb.txt !");
   			}
@@ -45,7 +47,7 @@ public class Lecteur {
 	}
 
 
-	public Map<String,int[]> getDictionnaire(){
+	public Map<String,Color> getDictionnaire(){
 		return this.dictionaire;
 	}
 
