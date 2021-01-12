@@ -39,7 +39,7 @@ public class Composant extends JComponent {
 
     for(int i = 0 ; i < this.nbParallel ; i++){
 
-      int coef = i*(this.l+this.mX);
+      int coef = i*(this.l+this.mX);//a partir d'où je commence à déssiner
       int[] xPointsNew = {this.mX+coef, (this.mX + this.i)+coef, (this.mX + this.i + this.l)+coef , (this.mX + this.l)+coef};
       int[] yPointsNew = {this.mY + this.h,this.mY ,this.mY ,this.mY + this.h};
 
